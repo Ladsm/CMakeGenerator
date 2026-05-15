@@ -99,7 +99,7 @@ void init_git_repository(const std::string& project_name) {
     int create_git = 0;
     std::cout << "Create git?\n0 - Yes\n1 - No\n";
     std::cin >> create_git;
-    if (create_git =! 1) {
+    if (create_git != 1) {
         fs::path old_path = fs::current_path();
         fs::current_path(project_name);
         int result = std::system("git init");
